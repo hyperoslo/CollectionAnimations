@@ -64,7 +64,7 @@ class ViewController: UIViewController {
 
   func prev() {
     items = data1
-    flowLayout.animator = VerticalFlipAnimator(appearingFrom: .Top, disappearingTo: .Back)
+    flowLayout.animator = FlyAnimator(appearingFrom: .Top, disappearingTo: .Back)
     reloadData(completion: { [unowned self] in
       self.navigationItem.leftBarButtonItem?.enabled = false
       self.navigationItem.rightBarButtonItem?.enabled = true
@@ -73,7 +73,7 @@ class ViewController: UIViewController {
 
   func next() {
     items = data2
-    flowLayout.animator = VerticalFlipAnimator(appearingFrom: .Back, disappearingTo: .Top)
+    flowLayout.animator = FlyAnimator(appearingFrom: .Back, disappearingTo: .Top)
     reloadData(completion: { [unowned self] in
       self.navigationItem.leftBarButtonItem?.enabled = true
       self.navigationItem.rightBarButtonItem?.enabled = false

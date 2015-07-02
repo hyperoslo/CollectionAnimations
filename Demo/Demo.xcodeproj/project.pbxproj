@@ -17,9 +17,10 @@
 		D5699BF11B1121D300332058 /* .gitkeep in Resources */ = {isa = PBXBuildFile; fileRef = D5699BEA1B1121D300332058 /* .gitkeep */; };
 		D5699BF21B1121D300332058 /* CollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5699BEB1B1121D300332058 /* CollectionViewLayout.swift */; };
 		D5699BF31B1121D300332058 /* UICollectionViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5699BED1B1121D300332058 /* UICollectionViewExtension.swift */; };
-		D5699BF41B1121D300332058 /* LayoutAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5699BEE1B1121D300332058 /* LayoutAnimator.swift */; };
-		D5699BF51B1121D300332058 /* StackAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5699BEF1B1121D300332058 /* StackAnimator.swift */; };
-		D5699BF61B1121D300332058 /* VerticalFlipAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5699BF01B1121D300332058 /* VerticalFlipAnimator.swift */; };
+		D5699BFB1B145D0600332058 /* StackAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5699BF81B145D0600332058 /* StackAnimator.swift */; };
+		D5699BFC1B145D0600332058 /* VerticalFlipAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5699BF91B145D0600332058 /* VerticalFlipAnimator.swift */; };
+		D5699BFD1B145D0600332058 /* LayoutAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5699BFA1B145D0600332058 /* LayoutAnimator.swift */; };
+		D5699BFF1B145D6500332058 /* FlyAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5699BFE1B145D6500332058 /* FlyAnimator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,9 +48,10 @@
 		D5699BEA1B1121D300332058 /* .gitkeep */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = .gitkeep; sourceTree = "<group>"; };
 		D5699BEB1B1121D300332058 /* CollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewLayout.swift; sourceTree = "<group>"; };
 		D5699BED1B1121D300332058 /* UICollectionViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UICollectionViewExtension.swift; sourceTree = "<group>"; };
-		D5699BEE1B1121D300332058 /* LayoutAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutAnimator.swift; sourceTree = "<group>"; };
-		D5699BEF1B1121D300332058 /* StackAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackAnimator.swift; sourceTree = "<group>"; };
-		D5699BF01B1121D300332058 /* VerticalFlipAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalFlipAnimator.swift; sourceTree = "<group>"; };
+		D5699BF81B145D0600332058 /* StackAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StackAnimator.swift; sourceTree = "<group>"; };
+		D5699BF91B145D0600332058 /* VerticalFlipAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerticalFlipAnimator.swift; sourceTree = "<group>"; };
+		D5699BFA1B145D0600332058 /* LayoutAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutAnimator.swift; sourceTree = "<group>"; };
+		D5699BFE1B145D6500332058 /* FlyAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlyAnimator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,11 +134,9 @@
 			isa = PBXGroup;
 			children = (
 				D5699BEA1B1121D300332058 /* .gitkeep */,
-				D5699BEB1B1121D300332058 /* CollectionViewLayout.swift */,
+				D5699BF71B145CDF00332058 /* Animators */,
 				D5699BEC1B1121D300332058 /* Extensions */,
-				D5699BEE1B1121D300332058 /* LayoutAnimator.swift */,
-				D5699BEF1B1121D300332058 /* StackAnimator.swift */,
-				D5699BF01B1121D300332058 /* VerticalFlipAnimator.swift */,
+				D5699BEB1B1121D300332058 /* CollectionViewLayout.swift */,
 			);
 			name = Source;
 			path = ../Source;
@@ -148,6 +148,17 @@
 				D5699BED1B1121D300332058 /* UICollectionViewExtension.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D5699BF71B145CDF00332058 /* Animators */ = {
+			isa = PBXGroup;
+			children = (
+				D5699BF81B145D0600332058 /* StackAnimator.swift */,
+				D5699BF91B145D0600332058 /* VerticalFlipAnimator.swift */,
+				D5699BFA1B145D0600332058 /* LayoutAnimator.swift */,
+				D5699BFE1B145D6500332058 /* FlyAnimator.swift */,
+			);
+			path = Animators;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -250,15 +261,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D5699BFF1B145D6500332058 /* FlyAnimator.swift in Sources */,
 				D5699BE71B11213600332058 /* AppDelegate.swift in Sources */,
 				D5699BE61B11213600332058 /* CardView.swift in Sources */,
-				D5699BF61B1121D300332058 /* VerticalFlipAnimator.swift in Sources */,
 				D5699BE81B11213600332058 /* CollectionViewCell.swift in Sources */,
-				D5699BF41B1121D300332058 /* LayoutAnimator.swift in Sources */,
 				D5699BE51B11213600332058 /* ViewController.swift in Sources */,
+				D5699BFB1B145D0600332058 /* StackAnimator.swift in Sources */,
+				D5699BFC1B145D0600332058 /* VerticalFlipAnimator.swift in Sources */,
 				D5699BF31B1121D300332058 /* UICollectionViewExtension.swift in Sources */,
+				D5699BFD1B145D0600332058 /* LayoutAnimator.swift in Sources */,
 				D5699BF21B1121D300332058 /* CollectionViewLayout.swift in Sources */,
-				D5699BF51B1121D300332058 /* StackAnimator.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
